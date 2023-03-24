@@ -18,9 +18,10 @@ class NewTT2 extends State<NewTT> {
   void submit() {
     final Tieude = maTieude.text;
     final Ngay = maNgayhh.text;
-
-    if (Tieude.isEmpty || Ngay.isEmpty) return;
-    widget.addthongtin(maTieude.text, DateTime.parse(maNgayhh.text));
+    final Id = maid.text;
+    
+    if (Tieude.isEmpty || Ngay.isEmpty || Id.isEmpty) return;
+    widget.addthongtin(maid, maTieude.text, DateTime.parse(maNgayhh.text));
     Navigator.of(context).pop();
   }
 
